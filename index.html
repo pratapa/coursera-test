@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app='LunchCheck'>
+<head>
+  <title>Lunch items status</title>
+  <script src="angular.min.js"></script>
+  <script src="app.js" ></script>
+  <style>
+      body{
+        background-color: #494F4E;
+      }
+      h1{
+        margin-left:7%;
+        font-style: italic;
+        font-family: cursive;
+        font-size:2em;
+        color:#D1D0CE;
+      }
+      input[type="text"]
+      {
+        margin-left:7%;
+        color:#494F4E;
+        width: 50%;
+        font-family: sans-serif;
+        font-size: 18px;
+        padding: 10px;
+        border: solid 3px #dcdcdc;
+        transition: box-shadow 0.3s, border 0.3s;
+      }
+      button{
+        border-radius: 10px;
+        font-family: Arial;
+        color: #494F4E;
+        font-size: 15px;
+        padding: 10px 20px 10px 20px;
+        text-decoration:none;
+        margin-left:20%;
+      }
+      h2{
+        text-shadow: 0 0 0.2em #FFFF0A;
+        margin-left:20%;
+      }
+  </style>
+</head>
+<body>
+  <div ng-controller='LunchCheckController'>
+    <h1>Please enter list of items in your lunch menu:</h1>
+    <br>
+    <br>
+    <input type="text" ng-model='items'>
+    <br>
+    <br>
+    <br>
+
+    <button ng-click='tellstatus()'>Check if Too Much</button>
+    <br>
+    <br>
+      <h2> {{mymessage}} </h2>
+</div>
+</body>
+</html>
